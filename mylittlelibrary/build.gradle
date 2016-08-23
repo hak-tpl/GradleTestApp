@@ -24,3 +24,30 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.1.1'
 }
+
+ext {
+    bintrayRepo = 'MyTestRepository'
+    bintrayName = 'gradle-dependency-test'
+
+    publishedGroupId = 'com.tplmaps.mylittlelibrary'
+    libraryName = 'GradleTestApp'
+    artifact = 'gradle-dependency-test'
+
+    libraryDescription = 'A test application for making dependency on android'
+
+    siteUrl = 'https://github.com/hak-tpl/GradleTestApp'
+    gitUrl = 'https://github.com/hak-tpl/GradleTestApp.git'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'hak-tpl'
+    developerName = 'Hamza Ahmed Khan'
+    developerEmail = 'hamza.ak.tpl@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
